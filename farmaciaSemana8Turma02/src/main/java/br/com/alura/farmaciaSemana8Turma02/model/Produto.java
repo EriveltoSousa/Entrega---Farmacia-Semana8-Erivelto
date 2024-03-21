@@ -2,15 +2,14 @@ package br.com.alura.farmaciaSemana8Turma02.model;
 
 import jakarta.persistence.*;
 
-public class Produro {
-    public Produro(String nomeProduto, String descricaoProduto, double precoProduto,Fabricaante) {
+
+@Entity
+@Table(name = "produto")
+public class Produto {
+    public Produto(String nomeProduto, String descricaoProduto, double precoProduto, Fabricaante){
+
     }
-
-    @Entity
-    @Table(name = "produtos")
-    public class Produto {
-
-        @Id
+    @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Integer id;
         private String nome;
@@ -73,4 +72,4 @@ public class Produro {
 
         }
 
-}
+
